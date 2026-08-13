@@ -21,5 +21,8 @@ All environment-specific values (domain names, server names, internal IP address
 - **full-scan** — Nmap-based SSL/TLS protocol and cipher enumeration across a list of subnets, parsed into a clean report.
 - **port-specific** — Same scan logic targeted at specific `IP:port` pairs, output to Excel for easier review.
 
+## Error handling
+Every script validates its prerequisites before doing any work (required module loaded, input files present, target files exist) and wraps its core operations in try/catch blocks. On failure, scripts print a clear, specific error message and exit rather than surfacing a raw PowerShell stack trace.
+
 ## Disclaimer
 These scripts were written for internal IT/security operations and have been sanitized for public sharing. Test in a non-production environment before use. Nmap scanning scripts should only be run against systems you own or have explicit authorization to test.
