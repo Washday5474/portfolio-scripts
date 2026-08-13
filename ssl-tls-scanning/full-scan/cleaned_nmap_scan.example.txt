@@ -1,0 +1,9 @@
+IP: 192.0.2.10
+    Port: 443
+        SSLv2 supported enabled.
+        TLSv1.0  enabled.
+        TLSv1.1  enabled.
+        TLSv1.2  enabled.
+    Port: 8443
+        TLSv1.2  enabled.
+        TLSv1.3  enabled.
