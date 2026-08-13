@@ -5,7 +5,7 @@ def run_powershell_script(script_path):
     command = ["powershell", "-ExecutionPolicy", "Bypass", "-File", script_path]
 
     # Run the command
-    subprocess.run(command, shell=True)
+    subprocess.run(command)
 
 # Define the paths to your PowerShell scripts
 powershell_script_1 = "GRPQuery.ps1"

@@ -6,4 +6,4 @@ Retrieves all enabled (or disabled) computer objects from the domain and exports
 ```powershell
 .\Server_Pull.ps1
 ```
-Replace `DC=example,DC=local` with your own domain's distinguished name, and adjust `$status` for enabled/disabled devices.
+Replace `dc01.example.local` with your own domain controller's hostname, and adjust `$status` for enabled/disabled devices.

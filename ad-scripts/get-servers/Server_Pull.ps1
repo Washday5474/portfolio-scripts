@@ -5,13 +5,13 @@ Import-Module ActiveDirectory
 New-Item -Path 'C:\temp\' -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
 
 # Specify the domain controller
-$OU = "DC=example,DC=local"
+$domainController = "dc01.example.local" # Change server/DC if necessary
 
 # Specify enabled status
 $status = $true # Change TRUE or FALSE as necessary
 
-# Get the users from AD
-$device = Get-ADComputer -Server $OU -Filter {(Enabled -eq $status)}
+# Get the computers from AD
+$device = Get-ADComputer -Server $domainController -Filter {(Enabled -eq $status)}
 
 # Define the data to export
 $dataToExport = $device | Select-Object Name, Enabled
