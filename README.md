@@ -21,6 +21,10 @@ All environment-specific values (domain names, server names, internal IP address
 - **full-scan** — Nmap-based SSL/TLS protocol and cipher enumeration across a list of subnets, parsed into a clean report.
 - **port-specific** — Same scan logic targeted at specific `IP:port` pairs, output to Excel for easier review.
 
+### `ai-agent-skills/`
+- **system-prompt.md** — orchestrating system prompt for a "Security Analyst" AI agent: environment inventory, skill lifecycle, and operating principles.
+- **skills/** — four standalone skills: `analyst-assistant` (SOC alert triage), `phishing-triage` (email-specific triage), `osint-ioc-enrichment` (multi-source IoC lookups), and `ioc-pivot-report` (scope/blast-radius expansion). See the folder's own README for details on format and usage.
+
 ## Error handling
 Every script validates its prerequisites before doing any work (required module loaded, input files present, target files exist) and wraps its core operations in try/catch blocks. On failure, scripts print a clear, specific error message and exit rather than surfacing a raw PowerShell stack trace.
 
